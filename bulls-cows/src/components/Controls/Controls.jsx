@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Display } from './Display/Display';
+import { Keyboards } from './Keyboards/Keyboards';
 
 export const Controls = (props) => {
   const [guess, setGuess] = useState('');
@@ -7,19 +9,22 @@ export const Controls = (props) => {
     props.onGuess(guess);
   };
 
+  const handleChange = (number) => {
+    setGuess(guess + number);
+  };
+
+  const handleDelete = () => {
+    setGuess(guess.slice(0, guess.length - 1));
+  };
+
   return (
     <>
-      <label>
-        Guess:
-        <input
-          type="text"
-          value={guess}
-          onChange={(event) => setGuess(event.target.value)}
-        />
-      </label>
-      <button type="submit" onClick={handleSubmit}>
-        Submit
-      </button>
+      <Display number={guess} />
+      <Keyboards onChange={handleChange} />
+      <div>
+        <button onClick={handleSubmit}>Submit</button>
+        <button onClick={handleDelete}>Delete</button>
+      </div>
     </>
   );
 };
