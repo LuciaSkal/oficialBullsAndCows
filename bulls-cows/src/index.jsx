@@ -9,34 +9,34 @@ import './style.css';
 const Game = ({set, delka}) => {
   function randomUnique(set, delka) {
     if (delka > set.length) {
-        throw new Error("Cannot generate that many unique characters.");
+      throw new Error('Cannot generate that many unique characters.');
     }
     const arr = [...set];
     for (let i = 0; i < delka; i++) {
-        const r = i + Math.floor(Math.random() * (set.length - i));
-        [arr[i], arr[r]] = [arr[r], arr[i]];
+      const r = i + Math.floor(Math.random() * (set.length - i));
+      [arr[i], arr[r]] = [arr[r], arr[i]];
     }
     return arr.slice(0, delka);
-}
+  }
 
-function parse(set, delka, input) {
+  function parse(set, delka, input) {
     if (input.length !== delka) {
-        return 'length';
+      return 'length';
     }
-    const split = input.split("");
+    const split = input.split('');
     for (let i = 0; i < split.length; i++) {
-        const c = split[i];
-        if (!set.includes(c)) {
-            return 'not-in-set';
-        }
-        if (split.lastIndexOf(c) > i) {
-            return 'repeating';
-        }
+      const c = split[i];
+      if (!set.includes(c)) {
+        return 'not-in-set';
+      }
+      if (split.lastIndexOf(c) > i) {
+        return 'repeating';
+      }
     }
     return split;
-}
+  }
 
-function check(rnd, tip) {
+  function check(rnd, tip) {
     const result = {
         bulls: 0,
         cows: 0,
@@ -44,36 +44,35 @@ function check(rnd, tip) {
         guess: tip,
     };
     for (let i = 0; i < rnd.length; i++) {
-        if (rnd[i] === tip[i]) {
-            result.bulls++;
-        } else if (rnd.includes(tip[i])) {
-            result.cows++;
-        } else {
-            result.calf++;
-        }
+      if (rnd[i] === tip[i]) {
+        result.bulls++;
+      } else if (rnd.includes(tip[i])) {
+        result.cows++;
+      } else {
+        result.calf++;
+      }
     }
-    return result
-}
+    return result;
+  }
 
-function reportError(error) {
+  function reportError(error) {
     switch (error) {
-        case 'length':
-            alert("This number is too long or short to be valid!");
-            break;
-        case 'not-in-set':
-            alert("The guess contains an illegal character!");
-            break;
-        case 'repeating':
-            alert("The guess contains a repeating digit!");
-            break;
-        default:
-            alert(`Error: ${error}`);
+      case 'length':
+        alert('This number is too long or short to be valid!');
+        break;
+      case 'not-in-set':
+        alert('The guess contains an illegal character!');
+        break;
+      case 'repeating':
+        alert('The guess contains a repeating digit!');
+        break;
+      default:
+        alert(`Error: ${error}`);
     }
-}
+  }
 
 
 
-  
   const [history, setHistory] = useState([
     {bulls: 2,
     cows: 1,
@@ -90,6 +89,7 @@ function reportError(error) {
 
   const handleGuess = (guess) => {
     const parsed = parse(set, delka, guess)
+    console.log(guess);
     if (typeof parsed === 'string') {
         reportError(parsed);
         return;
@@ -108,14 +108,12 @@ function reportError(error) {
 
   return (
     <>
-    <Header />
-    <Images />
-    <History history={history}/>
-    <Controls onGuess={handleGuess} />
+      <Header />
+      <Images />
+      <History history={history}/>
+      <Controls onGuess={handleGuess} />
     </>
   );
-}
-  
-
+};
 
 render(<Game set={"0123456789".split("")} delka={4} />, document.querySelector('#app'));
