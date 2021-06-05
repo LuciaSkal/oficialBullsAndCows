@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header-controls {
+  margin: 10px;
+}
+
+.timer {
+  margin: 10px;
+}

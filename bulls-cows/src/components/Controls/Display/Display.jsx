@@ -4,7 +4,7 @@ import './style.css';
 
 export const Display = ({ number }) => {
   return (
-    <div className="circle">
+    <div className="display">
       <Circle number={number[0]} noGradient={true} />
       <Circle number={number[1]} noGradient={true} />
       <Circle number={number[2]} noGradient={true} />

@@ -1,3 +1,11 @@
-.keyboards {
+.row {
   display: flex;
+  justify-content: center;
+}
+.row + .row {
+  margin-top: 4px;
+}
+.row,
+.circle {
+  margin-right: 4px;
 }

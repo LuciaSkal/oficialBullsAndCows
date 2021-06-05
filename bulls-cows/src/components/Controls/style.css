@@ -1,0 +1,8 @@
+.controls-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.controls-btn button {
+  margin: 20px;
+}
