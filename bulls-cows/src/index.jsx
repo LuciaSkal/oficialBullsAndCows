@@ -72,12 +72,14 @@ const Game = ({set, delka}) => {
       default:
         alert(`Error: ${error}`);
     }
-  }
+  };
 
 
 
-  const [history, setHistory] = useState([])
-  const [rnd, setRnd] = useState(() => randomUnique(set, delka))
+  const [history, setHistory] = useState([]);
+  const [rnd, setRnd] = useState(() => randomUnique(set, delka));
+  const [start, setStart] = useState(() => new Date())
+  const [stop, setStop] = useState(null)
 
   const handleGuess = (guess) => {
     const parsed = parse(set, delka, guess)
@@ -100,7 +102,7 @@ const Game = ({set, delka}) => {
 
   return (
     <>
-      <Header />
+      <Header start={start} stop={stop}/>
       <Images />
       <History history={history}/>
       <Controls onGuess={handleGuess} />
