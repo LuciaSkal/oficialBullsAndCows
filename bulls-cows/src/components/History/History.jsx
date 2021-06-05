@@ -3,7 +3,11 @@ import React from 'react';
 export const History = ({history}) => {
   return (
     <>
-      <div>{history.map((item, index) => <div key={index}>{item.guess}</div>)}</div>
+    <ol>
+      {history.map((item, index) => <li key={index}>
+
+      <span>{item.bulls}</span> {'<--'} <span>{item.guess}</span> {'-->'} <span>{item.cows}</span></li>)}
+    </ol>
     </>
   );
 };
