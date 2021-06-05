@@ -10,6 +10,8 @@ import {
   Route
 } from 'react-router-dom';
 import { Welcome } from './components/Welcome/Welcome';
+import { Tutorial } from './components/Tutorial/Tutorial';
+import { SelectGame } from './components/SelectGame/SelectGame';
 
 const App = () => {
   return (
@@ -17,18 +19,23 @@ const App = () => {
         <div className="container">
            <div className="top-image">
             <img src={imgTop} alt="blok" />
-          </div>
-        <Switch>
-        <Route path="/" exact children={Welcome}>
-           <Welcome />
-        </Route>
-
-        <Route path="/game" exact>
-          <div className="content">
-            <Game set={'0123456789'.split('')} delka={4} />
-          </div>
-        </Route>  
-        </Switch> 
+           </div>
+          <div className="content">  
+            <Switch>
+            <Route path="/" exact children={Welcome}>
+               <Welcome />
+            </Route>
+            <Route path="/tutorial" exact >
+               <Tutorial />
+            </Route>
+            <Route path="/selectgame" exact >
+               <SelectGame />
+            </Route>
+            <Route path="/game" exact>
+                <Game set={'0123456789'.split('')} delka={4} />
+            </Route>  
+            </Switch> 
+          </div> 
           <div className="bottom-image">
             <img src={imgBottom} alt="blok" />
           </div>
