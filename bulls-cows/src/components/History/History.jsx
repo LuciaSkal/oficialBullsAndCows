@@ -1,7 +1,9 @@
 import React from 'react';
 
-export const History = () => {
+export const History = ({history}) => {
   return (
-    <h1>History</h1>
+    <>
+      <div>{history.map((item, index) => <div key={index}>{item.guess}</div>)}</div>
+    </>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { render } from 'react-dom';
 import { Controls } from './components/Controls/Controls';
 import { Header } from './components/Header/Header';
@@ -6,7 +6,7 @@ import { History } from './components/History/History';
 import { Images } from './components/Images/Images';
 import './style.css';
 
-const Game = () => {
+const Game = ({set, delka}) => {
   function randomUnique(set, delka) {
     if (delka > set.length) {
         throw new Error("Cannot generate that many unique characters.");
@@ -40,7 +40,8 @@ function check(rnd, tip) {
     const result = {
         bulls: 0,
         cows: 0,
-        calf: 0
+        calf: 0,
+        guess: tip,
     };
     for (let i = 0; i < rnd.length; i++) {
         if (rnd[i] === tip[i]) {
@@ -70,56 +71,46 @@ function reportError(error) {
     }
 }
 
-function game(wrapper, set, delka) {
-    const oznam = wrapper.querySelector('.oznam')
-    const tip = wrapper.querySelector('.tip')
-    const button = wrapper.querySelector('button')
 
-    let rnd = randomUnique(set, delka);
-    let history = [];
 
-    /*button.addEventListener('click', () => {
-        const input = tip.value;
-        const parsed = parse(set, delka, input)
-        if (typeof parsed === 'string') {
-            reportError(parsed);
-            return;
-        }
-        history.push(parsed);
-
-        const {bulls, cows} = check(rnd, parsed);
-        if (bulls === delka) {
-            oznam.innerHTML += `you won the game, after ${history.length} guesses`
-        } else {
-            oznam.innerHTML += `${input} : ${bulls} bulls | ${cows} cows | guesses: ${history.length} <br>`
-        }
-    });*/
-}
-
-  //game(document, "0123456789".split(""), 4);
+  
+  const [history, setHistory] = useState([
+    {bulls: 2,
+    cows: 1,
+    calf: 1,
+    guess: ['1', '2', '3', '4']
+    },
+    { bulls: 1,
+      cows: 3,
+      calf: 1,
+      guess: ['3', '8', '7', '0']
+    }
+  ])
+  const [rnd, setRnd] = useState(randomUnique(set, delka))
 
   const handleGuess = (guess) => {
-   /* const input = tip.value;
-    const parsed = parse(set, delka, input)
+    const parsed = parse(set, delka, guess)
     if (typeof parsed === 'string') {
         reportError(parsed);
         return;
     }
-    history.push(parsed);
+    
+    const result = check(rnd, parsed);
+    setHistory([...history, result] );
 
     const {bulls, cows} = check(rnd, parsed);
     if (bulls === delka) {
-        oznam.innerHTML += `you won the game, after ${history.length} guesses`
+        console.log( `you won the game, after ${history.length} guesses`)
     } else {
-        oznam.innerHTML += `${input} : ${bulls} bulls | ${cows} cows | guesses: ${history.length} <br>`
-    }*/
-  }
+        console.log(`${guess} : ${bulls} bulls | ${cows} cows | guesses: ${history.length}`)
+    }
+  };
 
   return (
     <>
     <Header />
     <Images />
-    <History />
+    <History history={history}/>
     <Controls onGuess={handleGuess} />
     </>
   );
@@ -127,4 +118,4 @@ function game(wrapper, set, delka) {
   
 
 
-render(<Game />, document.querySelector('#app'));
+render(<Game set={"0123456789".split("")} delka={4} />, document.querySelector('#app'));
