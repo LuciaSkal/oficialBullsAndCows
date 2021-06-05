@@ -20,11 +20,25 @@ body {
   background-attachment: fixed;
   background-size: cover;
   overflow: hidden;
+  padding: 0 8px;
 }
 
+@media (min-width: 426px) {
+  body {
+    padding: 0 16px;
+  }
+}
+
+/*@media (min-width: 769px) {
+  body {
+    padding: 0 32px;
+  }
+}*/
+
+
 .container {
-  width: 50vw;
-  margin: 0.5em auto;
+ margin: 0.5em auto;
+ max-width: 768px;
 }
 
 .content {
