@@ -91,6 +91,7 @@ export const Game = ({ set, delka }) => {
     const { bulls, cows } = check(rnd, parsed);
     if (bulls === delka) {
       console.log(`you won the game, after ${history.length + 1} guesses`);
+      setStop(new Date());
     } else {
       console.log(
         `${guess} : ${bulls} bulls | ${cows} cows | guesses: ${
@@ -100,9 +101,16 @@ export const Game = ({ set, delka }) => {
     }
   };
 
+  const handleReset = () => {
+    setHistory([]);
+    setRnd(randomUnique(set, delka));
+    setStart(new Date());
+    setStop(null);
+  };
+
   return (
     <>
-      <Header start={start} stop={stop} />
+      <Header start={start} stop={stop} onReset={handleReset}/>
       <Images />
       <History history={history} />
       <Controls onGuess={handleGuess} />

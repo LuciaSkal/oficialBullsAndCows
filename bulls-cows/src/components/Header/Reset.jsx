@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const Reset = () => {
+export const Reset = ({onReset}) => {
   
   return(
-    <button>Reset</button>
+    <button onClick={onReset}>Reset</button>
   );
 }; 
