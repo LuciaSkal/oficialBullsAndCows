@@ -30,3 +30,7 @@ body {
 .content {
   background-color: #fff;
 }
+
+.top-image img {
+  display: block;
+}
