@@ -16,8 +16,11 @@ const Game = ({set, delka}) => {
       const r = i + Math.floor(Math.random() * (set.length - i));
       [arr[i], arr[r]] = [arr[r], arr[i]];
     }
-    return arr.slice(0, delka);
+    const rnd = arr.slice(0, delka);
+    console.log(rnd)
+    return  rnd //arr.slice(0, delka);
   }
+
 
   function parse(set, delka, input) {
     if (input.length !== delka) {
@@ -73,19 +76,8 @@ const Game = ({set, delka}) => {
 
 
 
-  const [history, setHistory] = useState([
-    {bulls: 2,
-    cows: 1,
-    calf: 1,
-    guess: ['1', '2', '3', '4']
-    },
-    { bulls: 1,
-      cows: 3,
-      calf: 1,
-      guess: ['3', '8', '7', '0']
-    }
-  ])
-  const [rnd, setRnd] = useState(randomUnique(set, delka))
+  const [history, setHistory] = useState([])
+  const [rnd, setRnd] = useState(() => randomUnique(set, delka))
 
   const handleGuess = (guess) => {
     const parsed = parse(set, delka, guess)
@@ -100,9 +92,9 @@ const Game = ({set, delka}) => {
 
     const {bulls, cows} = check(rnd, parsed);
     if (bulls === delka) {
-        console.log( `you won the game, after ${history.length} guesses`)
+        console.log( `you won the game, after ${history.length +1} guesses`)
     } else {
-        console.log(`${guess} : ${bulls} bulls | ${cows} cows | guesses: ${history.length}`)
+        console.log(`${guess} : ${bulls} bulls | ${cows} cows | guesses: ${history.length +1}`)
     }
   };
 
