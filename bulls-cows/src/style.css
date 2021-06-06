@@ -18,6 +18,9 @@ body {
   background-size: cover;
   overflow: hidden;
   padding: 0 8px;
+  display: flex;
+  align-items: center;
+  height: 100vh;
 }
 
 @media (min-width: 426px) {
@@ -31,9 +34,11 @@ body {
     padding: 0 32px;
   }
 }*/
-
+#app {
+  width: 100%;
+}
 .container {
-  margin: 0.5em auto;
+  margin: auto;
   max-width: 480px;
 }
 

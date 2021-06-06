@@ -5,13 +5,13 @@
 
 .controls-btn button {
   display: flex;
-  margin: 20px;
   padding: 10px;
   background-color: #fff;
   cursor: pointer;
   width: 40px;
   height: 40px;
   border: none;
+  margin: 10px;
 }
 
 .controls-btn img {

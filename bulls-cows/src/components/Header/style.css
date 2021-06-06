@@ -1,7 +1,6 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
 }
 
 .header-controls {
@@ -17,5 +16,6 @@
   margin-right: 20px;
 }
 .icon {
-  width: 50px;
+  width: 3em;
+  height: 3em;
 }
