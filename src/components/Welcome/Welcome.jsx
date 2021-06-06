@@ -28,16 +28,24 @@ const Images = () => {
 };
 
 export const Welcome = () => {
+  const boxRefTutorial = useRef();
+  const boxRefPlay = useRef();
+  useEffect(() => {
+    gsap.from([boxRefTutorial.current], 
+      {duration: 2, opacity: 0, scale: 0.5, ease: "back", delay: 3});
+    gsap.from([boxRefPlay.current], {duration: 2, opacity: 0, scale: 0.5, ease: "back", delay: 3});
+  });
+
   return (
     <>
       <Images />
       <h1>Bulls & Cows</h1>
       <div className="odkazy">
-        <Link to="/tutorial" className="tutorial">
+        <Link to="/tutorial" ref={boxRefTutorial} className="tutorial">
           {" "}
           Tutorial
         </Link>
-        <Link to="/selectgame" className="play">
+        <Link to="/selectgame" ref={boxRefPlay} className="play">
           Play
         </Link>
       </div>
