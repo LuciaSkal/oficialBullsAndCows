@@ -1,19 +1,19 @@
-h1{
+h1 {
   font-size: 2rem;
   text-align: center;
 }
 
-
 .odkazy {
   margin-top: 2%;
-   display: flex;
-   justify-content: center;
-    text-align: center;
-    gap: 1.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
 }
 
-.tutorial, .play {
- font-size: 1rem;
+.tutorial,
+.play {
+  font-size: 1rem;
   border: 2px solid;
   border-radius: 50%;
   padding: 1rem;

@@ -4,5 +4,22 @@
 }
 
 .controls-btn button {
+  display: flex;
   margin: 20px;
+  padding: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+.controls-btn img {
+  border: double 4px transparent;
+  border-radius: 50%;
+  width: 80%;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, #ec93e3, #af89be);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 }

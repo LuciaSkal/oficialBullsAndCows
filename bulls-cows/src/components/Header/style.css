@@ -11,3 +11,11 @@
 .timer {
   margin: 10px;
 }
+.header-btn {
+  border: none;
+  background-color: #fff;
+  margin-right: 20px;
+}
+.icon {
+  width: 50px;
+}
