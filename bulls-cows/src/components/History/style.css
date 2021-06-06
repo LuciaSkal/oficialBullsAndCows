@@ -1,5 +1,14 @@
 .guess-history {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
+}
+
+.arrow {
+  margin: 0 35px;
+}
+
+.history-container {
+  max-height: 110px;
+  overflow: auto;
 }

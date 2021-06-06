@@ -1,7 +1,6 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
 }
 
 .header-controls {
@@ -10,4 +9,13 @@
 
 .timer {
   margin: 10px;
+}
+.header-btn {
+  border: none;
+  background-color: #fff;
+  margin-right: 20px;
+}
+.icon {
+  width: 3em;
+  height: 3em;
 }
