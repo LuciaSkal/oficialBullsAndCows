@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
-import { Controls } from './components/Controls/Controls';
-import { Header } from './components/Header/Header';
-import { History } from './components/History/History';
-import { Images } from './components/Images/Images';
-import './style.css';
+import React, { useState } from "react";
+import { Controls } from "./components/Controls/Controls";
+import { Header } from "./components/Header/Header";
+import { History } from "./components/History/History";
+import { Images } from "./components/Images/Images";
+import "./style.css";
+import { useWindowSize } from "@react-hook/window-size";
+import Confetti from "react-confetti";
 
 export const Game = ({ set, delka }) => {
   function randomUnique(set, delka) {
     if (delka > set.length) {
-      throw new Error('Cannot generate that many unique characters.');
+      throw new Error("Cannot generate that many unique characters.");
     }
     const arr = [...set];
     for (let i = 0; i < delka; i++) {
@@ -22,16 +24,16 @@ export const Game = ({ set, delka }) => {
 
   function parse(set, delka, input) {
     if (input.length !== delka) {
-      return 'length';
+      return "length";
     }
-    const split = input.split('');
+    const split = input.split("");
     for (let i = 0; i < split.length; i++) {
       const c = split[i];
       if (!set.includes(c)) {
-        return 'not-in-set';
+        return "not-in-set";
       }
       if (split.lastIndexOf(c) > i) {
-        return 'repeating';
+        return "repeating";
       }
     }
     return split;
@@ -58,14 +60,14 @@ export const Game = ({ set, delka }) => {
 
   function reportError(error) {
     switch (error) {
-      case 'length':
-        alert('This number is too long or short to be valid!');
+      case "length":
+        alert("This number is too long or short to be valid!");
         break;
-      case 'not-in-set':
-        alert('The guess contains an illegal character!');
+      case "not-in-set":
+        alert("The guess contains an illegal character!");
         break;
-      case 'repeating':
-        alert('The guess contains a repeating digit!');
+      case "repeating":
+        alert("The guess contains a repeating digit!");
         break;
       default:
         alert(`Error: ${error}`);
@@ -76,12 +78,12 @@ export const Game = ({ set, delka }) => {
   const [rnd, setRnd] = useState(() => randomUnique(set, delka));
   const [start, setStart] = useState(() => new Date());
   const [stop, setStop] = useState(null);
-  
+  const [width, height] = useWindowSize();
 
   const handleGuess = (guess) => {
     const parsed = parse(set, delka, guess);
     console.log(guess);
-    if (typeof parsed === 'string') {
+    if (typeof parsed === "string") {
       reportError(parsed);
       return;
     }
@@ -97,7 +99,7 @@ export const Game = ({ set, delka }) => {
       console.log(
         `${guess} : ${bulls} bulls | ${cows} cows | guesses: ${
           history.length + 1
-        }`,
+        }`
       );
     }
   };
@@ -111,10 +113,11 @@ export const Game = ({ set, delka }) => {
 
   return (
     <>
-      <Header start={start} stop={stop} onReset={handleReset}/>
+      <Header start={start} stop={stop} onReset={handleReset} />
       <Images />
       <History history={history} />
-      <Controls onGuess={handleGuess} length={delka}/>
+      <Controls onGuess={handleGuess} length={delka} />
+      {stop !== null && <Confetti width={width} height={height} />}
     </>
   );
 };
