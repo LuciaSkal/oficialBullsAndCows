@@ -21,6 +21,6 @@ export const Timer = ({start, stop}) => {
   const minutes = String(Math.floor(totalTime / 60)).padStart(2, '0');
 
   return(
-    <div>{minutes}:{seconds}</div>
+    <span>{minutes}:{seconds}</span>
   );
 }; 

@@ -6,6 +6,8 @@ import { Images } from "./components/Images/Images";
 import "./style.css";
 import { useWindowSize } from "@react-hook/window-size";
 import Confetti from "react-confetti";
+import { ModalView } from "./components/ModalView/ModalView"
+
 
 export const Game = ({ set, delka }) => {
   function randomUnique(set, delka) {
@@ -94,7 +96,7 @@ export const Game = ({ set, delka }) => {
     const { bulls, cows } = check(rnd, parsed);
     if (bulls === delka) {
       console.log(`you won the game, after ${history.length + 1} guesses`);
-      setStop(new Date());
+     setStop(new Date());
     } else {
       console.log(
         `${guess} : ${bulls} bulls | ${cows} cows | guesses: ${
@@ -118,6 +120,9 @@ export const Game = ({ set, delka }) => {
       <History history={history} />
       <Controls onGuess={handleGuess} length={delka} />
       {stop !== null && <Confetti width={width} height={height} />}
+      {stop !== null && (
+        <ModalView pocetPokusu={history.length} onOk={handleReset} start={start} stop={stop} />
+      )}
     </>
   );
 };
