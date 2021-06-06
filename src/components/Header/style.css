@@ -18,4 +18,10 @@
 .icon {
   width: 3em;
   height: 3em;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: rotate(180deg);
+  transition-delay: 2s;
 }
