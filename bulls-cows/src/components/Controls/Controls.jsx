@@ -3,16 +3,19 @@ import { Display } from './Display/Display';
 import { Keyboards } from './Keyboards/Keyboards';
 import './style.css';
 
-export const Controls = (props) => {
+export const Controls = ({onGuess, length}) => {
   const [guess, setGuess] = useState('');
 
   const handleSubmit = () => {
-    props.onGuess(guess);
+   onGuess(guess);
     setGuess('');
   };
 
   const handleChange = (number) => {
-    setGuess(guess + number);
+    
+    if (guess.length !== length) {
+      setGuess(guess + number);
+    }
   };
 
   const handleDelete = () => {
@@ -21,11 +24,15 @@ export const Controls = (props) => {
 
   return (
     <>
-      <Display number={guess} />
+      <Display number={guess} length={length} />
       <Keyboards onChange={handleChange} />
       <div className="controls-btn">
-        <button onClick={handleDelete}>Delete</button>
-        <button onClick={handleSubmit}>Submit</button>
+        <button onClick={handleDelete}
+        disabled={guess.length === 0}
+        >Delete</button>
+        <button onClick={handleSubmit}
+        disabled={guess.length !== length}
+        >Submit</button>
       </div>
     </>
   );

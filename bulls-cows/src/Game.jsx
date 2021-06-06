@@ -76,6 +76,7 @@ export const Game = ({ set, delka }) => {
   const [rnd, setRnd] = useState(() => randomUnique(set, delka));
   const [start, setStart] = useState(() => new Date());
   const [stop, setStop] = useState(null);
+  
 
   const handleGuess = (guess) => {
     const parsed = parse(set, delka, guess);
@@ -113,7 +114,7 @@ export const Game = ({ set, delka }) => {
       <Header start={start} stop={stop} onReset={handleReset}/>
       <Images />
       <History history={history} />
-      <Controls onGuess={handleGuess} />
+      <Controls onGuess={handleGuess} length={delka}/>
     </>
   );
 };

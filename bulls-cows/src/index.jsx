@@ -31,9 +31,15 @@ const App = () => {
             <Route path="/selectgame" exact >
                <SelectGame />
             </Route>
-            <Route path="/game" exact>
+            <Route path="/game4" exact>
                 <Game set={'0123456789'.split('')} delka={4} />
             </Route>  
+            <Route path="/game6" exact>
+                <Game set={'0123456789'.split('')} delka={6} />
+            </Route>
+            <Route path="/game8" exact>
+                <Game set={'0123456789'.split('')} delka={8} />
+            </Route>
             </Switch> 
           </div> 
           <div className="bottom-image">
