@@ -1,0 +1,21 @@
+.select-game {
+  margin-top: 5%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.game {
+  font-size: 1rem;
+  border: 2px solid;
+  border-radius: 50%;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+}
