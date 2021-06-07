@@ -11,11 +11,10 @@ const Images = () => {
   useEffect(() => {
     gsap.from([boxRefbull.current], {
       x: "-400px",
-      duration: 2,
+      duration: 3,
     });
-    gsap.from([boxRefcow.current], {
-      x: "400px",
-      duration: 2,
+    gsap.to([boxRefcow.current], {
+      duration: 3, rotation: 360, scale: 1
     });
   });
 
