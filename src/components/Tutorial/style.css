@@ -1,0 +1,78 @@
+.carousel {
+  display: flex;
+  max-width: 480px;
+  height: 400px;
+}
+
+.carousel_previous,
+.carousel_next {
+  flex-shrink: 0;
+}
+
+.carousel_media {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.carousel_image {
+  width: 165%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.home_icon {
+  width: 3em;
+  height: 3em;
+  cursor: pointer;
+  display: inline-block;
+}
+.home_icon:hover {
+  width: 3.5em;
+  height: 3.5em;
+  transition: all 0.25s;
+}
+
+.tutorial_container {
+  text-align: center;
+  height: 600px;
+}
+
+.home {
+  border: none;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+.carousel button {
+  border: none;
+  background-color: #fff;
+}
+
+#left {
+  transform: rotate(-90deg);
+  width: 3em;
+  height: 3em;
+}
+#right {
+  transform: rotate(90deg);
+  width: 3em;
+  height: 3em;
+}
+
+.linkPlay {
+  text-decoration: none;
+  color: black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 5px;
+  transition: all 0.35s;
+}
+
+.linkPlay:hover {
+  letter-spacing: 5px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #ec93e3, #af89be);
+}
