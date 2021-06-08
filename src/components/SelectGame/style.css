@@ -9,11 +9,13 @@
 }
 
 .game {
-  font-size: 1rem;
-  border: 2px solid;
-  border-radius: 50%;
-  padding: 1rem;
+  width: 5rem;
+  font-weight: 700;
+  color: black;
+  border: 2px solid black;
   text-decoration: none;
+  background: linear-gradient(to right, #ECB7B6, #AE87BD);
+  border-radius: 5%;
 }
 
 h2 {
