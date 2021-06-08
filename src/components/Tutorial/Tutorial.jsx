@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 import first from "./img/tutorial_1.svg";
 import second from "./img/tutorial_2.svg";
@@ -45,9 +46,9 @@ export const Tutorial = () => {
           <img id="right" src={arrow} alt="arrow" />
         </button>
       </div>
-      <a className="linkPlay" href="#">
+      <Link to="/selectgame" className="linkPlay">
         Let's play!!!
-      </a>
+      </Link>
     </div>
   );
 };
