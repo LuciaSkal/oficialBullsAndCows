@@ -10,3 +10,11 @@
 .gradient-btn {
   background-image: linear-gradient(#ec93e3, #af89be);
 }
+
+.circle:hover {
+  border: 3px dotted #cf5dc6;
+  font-weight: 700;
+  color: black ;
+  background: #fff;
+}
+

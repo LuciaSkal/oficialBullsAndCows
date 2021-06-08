@@ -4,7 +4,6 @@
    flex-direction: column;
    justify-content: center;
     text-align: center;
-    gap: 1rem;
     align-items: center;
 }
 
@@ -16,8 +15,46 @@
   text-decoration: none;
   background: linear-gradient(to right, #ECB7B6, #AE87BD);
   border-radius: 5%;
+  margin-bottom: 1rem;
+  /*transform-style: preserve-3d; -->patri ku hover druhy styl<-- */
 }
 
 h2 {
   text-align: center;
 }
+
+/*------------hover style ------------*/
+ 
+
+/* prvni: */
+.game:hover {
+  border: 3px dotted #b94bbd;
+  color:black;
+  background: #fff;
+}
+
+/* druhy : 
+.game:after {
+  top: -100%;
+  left: 0px;
+  width: 100%;
+  position: absolute;
+  background: #cf5cb6;
+  border-radius: 5px;
+  content: 'Loading...';
+  transform-origin: left bottom;
+  transform: rotateX(90deg);
+}
+
+.game:hover {
+  transform-origin: center bottom;
+  transform: rotateX(-90deg) translateY(100%);
+}*/
+
+/* treti 
+.game:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+} */
+
