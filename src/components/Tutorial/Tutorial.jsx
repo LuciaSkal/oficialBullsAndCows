@@ -5,7 +5,7 @@ import first from "./img/tutorial_1.svg";
 import second from "./img/tutorial_2.svg";
 import third from "./img/tutorial_3.svg";
 import forth from "./img/tutorial_4.svg";
-import fifth from "./img/tutorial_5.svg";
+import fifth from "./img/test.svg";
 import home from "../Header/img/home.svg";
 import arrow from "./img/up-arrow.svg";
 
