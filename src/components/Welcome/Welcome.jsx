@@ -41,7 +41,6 @@ export const Welcome = () => {
       <h1>Bulls & Cows</h1>
       <div className="odkazy">
         <Link to="/tutorial" ref={boxRefTutorial} className="tutorial">
-          {" "}
           Tutorial
         </Link>
         <Link to="/selectgame" ref={boxRefPlay} className="play">
