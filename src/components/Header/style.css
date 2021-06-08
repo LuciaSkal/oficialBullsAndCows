@@ -22,6 +22,12 @@
 }
 
 .icon:hover {
-  transform: rotate(180deg);
-  transition-delay: 2s;
-}
+  transform: scale(1.2);
+}  
+
+
+/* tohle bylo predtim, ale nefungovalo
+transform: rotate(180deg);
+  transition-delay: 2s;*/
+
+  /*transform: scale(1.2);*/

@@ -9,12 +9,17 @@
 }
 .gradient-btn {
   background-image: linear-gradient(#ec93e3, #af89be);
+  
 }
 
-.circle:hover {
+.row div:hover {
   border: 3px dotted #cf5dc6;
   font-weight: 700;
   color: black ;
   background: #fff;
+  transform: scale(1.2);  /*zvetseni*/
 }
 
+.row div {
+  cursor: pointer;
+}

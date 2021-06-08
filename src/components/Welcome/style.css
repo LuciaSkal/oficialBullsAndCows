@@ -28,6 +28,6 @@ h1 {
 .tutorial:hover,
 .play:hover {
   border: 3px dotted #cf5dc6;
-  color:#cf5dc6           ;
+  color: black;
   background: #fff;
 }
