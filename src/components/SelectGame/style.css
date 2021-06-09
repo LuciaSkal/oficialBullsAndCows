@@ -1,13 +1,13 @@
 .select-game {
   margin-top: 5%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-    text-align: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
-.game {
+/* .game {
   width: 5rem;
   font-weight: 700;
   color: black;
@@ -16,23 +16,22 @@
   background: linear-gradient(to right, #ECB7B6, #AE87BD);
   border-radius: 5%;
   margin-bottom: 1rem;
-  /*transform-style: preserve-3d; -->patri ku hover druhy styl<-- */
-}
+  transform-style: preserve-3d; -->patri ku hover druhy styl<--
+} */
 
 h2 {
   text-align: center;
 }
 
 /*------------hover style ------------*/
- 
 
 /* prvni: */
-.game:hover {
+/* .game:hover {
   border: 3px dotted #b94bbd;
   color:black;
   background: #fff;
   transform: scale(1.2);
-}
+} */
 
 /* druhy : 
 .game:after {
@@ -59,3 +58,24 @@ h2 {
   transform: scale(1.2);
 } */
 
+.game {
+  text-decoration: none;
+  margin: 5px;
+  color: black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 5px;
+  transition: all 0.35s;
+}
+
+.game:hover {
+  letter-spacing: 5px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #ec93e3, #af89be);
+}
+
+.home-icon {
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+}

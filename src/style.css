@@ -12,6 +12,14 @@ html {
   font-family: myFont;
   font-size: 1.6em;
 }
+
+h1,
+h2,
+h3 {
+  font-family: titleFont;
+  font-weight: 100;
+}
+
 body {
   background-image: url(img/texture-wooden-boards_zmenseny.jpg);
   background-attachment: fixed;
