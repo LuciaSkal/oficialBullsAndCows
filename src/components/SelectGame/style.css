@@ -78,4 +78,11 @@ h2 {
   width: 1.5em;
   height: 1.5em;
   cursor: pointer;
+  position: relative;
+  left: 45%;
+  cursor: pointer;
+}
+
+.home-icon:hover {
+  transform: scale(1.2);
 }
