@@ -31,8 +31,8 @@ export const Welcome = () => {
   const boxRefPlay = useRef();
   useEffect(() => {
     gsap.from([boxRefTutorial.current], 
-      {duration: 2, opacity: 0, scale: 0.5, ease: "back", delay: 3});
-    gsap.from([boxRefPlay.current], {duration: 2, opacity: 0, scale: 0.5, ease: "back", delay: 3});
+      {duration: 2, opacity: 0, scale: 0.5, ease: "back", delay: 2});
+    gsap.from([boxRefPlay.current], {duration: 2, opacity: 0, scale: 0.5, ease: "back", delay: 2});
   });
 
   return (
