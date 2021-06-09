@@ -7,7 +7,7 @@ import third from "./img/tutorial_3.svg";
 import forth from "./img/tutorial_4.svg";
 import fifth from "./img/tutorial_5.svg";
 import home from "../Header/img/home.svg";
-import arrow from "./img/up-arrow.svg";
+import arrow from "./img/arrow.svg";
 
 export const Tutorial = () => {
   const [picture, setPicture] = useState(0);
@@ -15,7 +15,7 @@ export const Tutorial = () => {
 
   return (
     <div className="tutorial_container">
-      <h1>Tutorial</h1>
+      <h2>Tutorial</h2>
 
       <button className="home">
         <img className="home_icon" src={home} alt="main-menu-icon" />

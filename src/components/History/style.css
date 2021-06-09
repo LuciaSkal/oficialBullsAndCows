@@ -1,14 +1,25 @@
 .guess-history {
   display: flex;
   justify-content: center;
-  margin-bottom: 3px;
 }
 
 .arrow {
-  margin: 0 35px;
+  margin: 0 25px;
 }
 
 .history-container {
-  max-height: 110px;
+  max-height: 136px;
   overflow: auto;
+}
+
+#left_bull {
+  width: 1.5em;
+  height: 1.5em;
+  transform: rotate(-90deg);
+}
+
+#right_cow {
+  width: 1.5em;
+  height: 1.5em;
+  transform: rotate(90deg);
 }

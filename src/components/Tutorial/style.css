@@ -2,6 +2,7 @@
   display: flex;
   max-width: 480px;
   height: 400px;
+  margin-bottom: 15px;
 }
 
 .carousel_previous,
@@ -37,7 +38,7 @@
   text-align: center;
   height: 590px;
 }
-.tutorial_container h1 {
+.tutorial_container h2 {
   margin-top: 0;
   font-weight: 100;
 }

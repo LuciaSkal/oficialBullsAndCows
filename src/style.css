@@ -10,10 +10,10 @@
 }
 html {
   font-family: myFont;
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 body {
-  background-image: url(img/texture-wooden-boards.jpg);
+  background-image: url(img/texture-wooden-boards_zmenseny.jpg);
   background-attachment: fixed;
   background-size: cover;
   overflow: hidden;
