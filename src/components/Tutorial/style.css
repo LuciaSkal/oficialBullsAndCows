@@ -1,7 +1,7 @@
 .carousel {
   display: flex;
   max-width: 480px;
-  height: 400px;
+  height: 330px;
   margin-bottom: 15px;
 }
 
@@ -19,9 +19,10 @@
 }
 
 .carousel_image {
-  width: 105%;
+  width: 100%;
   height: 100%;
   object-fit: contain;
+  margin: 0 5px;
 }
 
 .home_icon {
@@ -36,7 +37,7 @@
 
 .tutorial_container {
   text-align: center;
-  height: 590px;
+  height: 500px;
 }
 .tutorial_container h2 {
   margin-top: 0;
@@ -51,7 +52,12 @@
 
 .carousel button {
   border: none;
-  background-color: #fff;
+  margin: 3px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.carousel button:hover {
+  transform: scale(1.2);
 }
 
 #left {

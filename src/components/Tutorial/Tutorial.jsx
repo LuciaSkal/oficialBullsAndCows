@@ -23,7 +23,8 @@ export const Tutorial = () => {
 
       <div className="carousel">
         <button
-          disabled={picture === 0 ? true : false}
+          // disabled={picture === 0 ? true : false}
+          disabled={picture === 0}
           onClick={() => setPicture(picture - 1)}
           className="carousel_previous"
         >
