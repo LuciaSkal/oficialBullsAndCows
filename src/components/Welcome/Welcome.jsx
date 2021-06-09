@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import "./style.css";
@@ -8,10 +8,10 @@ import imgCow from "../Images/img/svg_cow.svg";
 const Images = () => {
   const boxRefbull = useRef();
   const boxRefcow = useRef();
-  const [imgsLoaded, setImgsLoaded] = useState(0);
+  
 
   useEffect(() => {
-    if (imgsLoaded === 2) {
+   
       gsap.from([boxRefbull.current], {
         x: "-400px",
         duration: 3,
@@ -20,14 +20,12 @@ const Images = () => {
         x: "400px",
         duration: 3,
       });
-    } 
-  },[imgsLoaded]);
+  },);
 
   return (
-    <div className="images"
-    style={imgsLoaded === 2 ? undefined : {visibility: "hidden"}}>
-      <img ref={boxRefbull} src={imgBull} alt="býk" onLoad={() => setImgsLoaded(imgsLoaded + 1)}/>
-      <img ref={boxRefcow} src={imgCow} alt="kráva" onLoad={() => setImgsLoaded(imgsLoaded + 1)} />
+    <div className="images">
+      <img ref={boxRefbull} src={imgBull} alt="býk" />
+      <img ref={boxRefcow} src={imgCow} alt="kráva"  />
     </div>
   );
 };
