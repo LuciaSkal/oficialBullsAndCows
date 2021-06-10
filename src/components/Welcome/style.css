@@ -4,10 +4,10 @@ h1 {
   text-align: center;
 }
 
-.odkazy {
+.link {
   margin-top: 2%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   text-align: center;
 }
 
@@ -35,19 +35,45 @@ h1 {
   background: #fff;
 } */
 
-.tutorial,
-.play {
+/* .tutorial, */
+/* .play {
   text-decoration: none;
   color: black;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   padding: 5px;
   transition: all 0.35s;
-}
+} */
 
-.tutorial:hover,
-.play:hover {
+/* .tutorial:hover, */
+/* .play:hover {
   letter-spacing: 5px;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #ec93e3, #af89be);
+} */
+.tutorial {
+  color: black;
+  text-decoration: black;
+}
+/* .play {
+  background-image: url("img/Datový\ zdroj\ 7.svg");
+  background-size: cover;
+  width: 4em;
+  height: 4em;
+} */
+.sticker {
+  background-size: cover;
+  width: 4.5em;
+  height: 4.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+#sticker-tutorial {
+  background-image: url("img/sticker.svg");
+}
+#sticker-play {
+  background-image: url("img/stickerr.svg");
 }

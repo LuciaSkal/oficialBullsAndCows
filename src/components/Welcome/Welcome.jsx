@@ -52,18 +52,22 @@ export const Welcome = () => {
     <>
       <Images />
       <h1>Bulls & Cows</h1>
-      <div className="odkazy">
-        <Link to="/tutorial" className="tutorial">
-          {/* ref={boxRefTutorial}  */}
-          Tutorial
-        </Link>
-        <Link
-          to="/selectgame"
-          //ref={boxRefPlay}
-          className="play"
-        >
-          Play
-        </Link>
+      <div className="link">
+        <div className="sticker" id="sticker-tutorial">
+          <Link to="/tutorial" className="tutorial">
+            {/* ref={boxRefTutorial}  */}
+            tutorial
+          </Link>
+        </div>
+        <div className="sticker" id="sticker-play">
+          <Link
+            to="/selectgame"
+            //ref={boxRefPlay}
+            className="play"
+          >
+            Play
+          </Link>
+        </div>
       </div>
     </>
   );

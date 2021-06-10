@@ -26,8 +26,8 @@
 }
 
 .home_icon {
-  width: 3em;
-  height: 3em;
+  width: 1.8em;
+  height: 1.8em;
   cursor: pointer;
   display: inline-block;
 }
@@ -45,8 +45,6 @@
 }
 
 .home {
-  border: none;
-  background-color: #fff;
   margin: 5px 0;
 }
 
