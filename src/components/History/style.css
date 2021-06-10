@@ -1,7 +1,6 @@
 .guess-history {
   display: flex;
   justify-content: center;
-  line-height: 22px;
 }
 
 .arrow {
@@ -9,7 +8,7 @@
 }
 
 .history-container {
-  max-height: 120px;
+  max-height: 135px;
   overflow: auto;
 }
 

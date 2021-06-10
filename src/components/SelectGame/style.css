@@ -21,6 +21,7 @@
 
 h2 {
   text-align: center;
+  font-size: 1em;
 }
 
 /*------------hover style ------------*/
@@ -75,7 +76,14 @@ h2 {
 }
 
 .home-icon {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.8em;
+  height: 1.8em;
   cursor: pointer;
+  position: relative;
+  left: 45%;
+  cursor: pointer;
+}
+
+.home-icon:hover {
+  transform: scale(1.2);
 }

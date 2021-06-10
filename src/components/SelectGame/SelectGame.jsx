@@ -8,7 +8,9 @@ export const SelectGame = () => {
   return (
     <div>
       <Images />
-      <img className="home-icon" src={home} alt="home" />
+      <Link to="/">
+        <img className="home-icon" src={home} alt="main-menu-icon" />
+      </Link>
       <h2>Play game with</h2>
       <div className="select-game">
         <Link to="/game4" className="game">

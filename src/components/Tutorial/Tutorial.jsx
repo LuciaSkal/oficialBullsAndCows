@@ -17,13 +17,18 @@ export const Tutorial = () => {
     <div className="tutorial_container">
       <h2>Tutorial</h2>
 
-      <button className="home">
+      <Link to="/" className="home">
         <img className="home_icon" src={home} alt="main-menu-icon" />
-      </button>
+      </Link>
+
+      {/* <button className="home">
+        <img className="home_icon" src={home} alt="main-menu-icon" />
+      </button> */}
 
       <div className="carousel">
         <button
-          disabled={picture === 0 ? true : false}
+          // disabled={picture === 0 ? true : false}
+          disabled={picture === 0}
           onClick={() => setPicture(picture - 1)}
           className="carousel_previous"
         >
@@ -46,7 +51,7 @@ export const Tutorial = () => {
           <img id="right" src={arrow} alt="arrow" />
         </button>
       </div>
-      <Link to="/selectgame" className="linkPlay">
+      <Link to="/Selectgame" className="linkPlay">
         Let's play!!!
       </Link>
     </div>
