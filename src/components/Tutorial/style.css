@@ -83,3 +83,7 @@
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #ec93e3, #af89be);
 }
+
+button:disabled {
+  filter: opacity(5%) blur(2px);
+}
