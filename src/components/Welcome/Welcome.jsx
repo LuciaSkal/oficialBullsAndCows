@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import "./style.css";
 import imgBull from "../Images/img/svg_bull.svg";
 import imgCow from "../Images/img/svg_cow.svg";
+import baner from "./img/flower_baner.svg";
 
 const Images = () => {
   const boxRefbull = useRef();
@@ -51,21 +52,25 @@ export const Welcome = () => {
   return (
     <>
       <Images />
-      <h1>Bulls & Cows</h1>
+      <div className="title_baner">
+        <img className="flower_baner" src={baner} alt="baner" />
+        <h1>Bulls & Cows</h1>
+      </div>
+
       <div className="link">
-        <div className="sticker" id="sticker-tutorial">
+        <div className="stickerT">
           <Link to="/tutorial" className="tutorial">
             {/* ref={boxRefTutorial}  */}
             tutorial
           </Link>
         </div>
-        <div className="sticker" id="sticker-play">
+        <div className="stickerP">
           <Link
             to="/selectgame"
             //ref={boxRefPlay}
             className="play"
           >
-            Play
+            play
           </Link>
         </div>
       </div>
