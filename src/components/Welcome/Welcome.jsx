@@ -53,19 +53,19 @@ export const Welcome = () => {
       <Images />
       <h1>Bulls & Cows</h1>
       <div className="link">
-        <div className="sticker" id="sticker-tutorial">
+        <div className="sticker">
           <Link to="/tutorial" className="tutorial">
             {/* ref={boxRefTutorial}  */}
             tutorial
           </Link>
         </div>
-        <div className="sticker" id="sticker-play">
+        <div className="stickerr">
           <Link
             to="/selectgame"
             //ref={boxRefPlay}
             className="play"
           >
-            Play
+            play
           </Link>
         </div>
       </div>
