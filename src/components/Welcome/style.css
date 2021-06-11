@@ -1,5 +1,5 @@
-.title_baner {
-}
+/* .title_baner {
+} */
 
 .child {
   display: flex;
@@ -7,10 +7,11 @@
   align-items: center;
 }
 
-.child img {
-}
+/* .child img {
+} */
 
 .flower_baner {
+  /* max-height: 263px; */
   height: 263px;
 }
 
