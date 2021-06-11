@@ -84,6 +84,7 @@
   border-image-source: linear-gradient(to left, #ec93e3, #af89be);
 }
 
-button:disabled {
+
+.carousel button:disabled {
   filter: opacity(5%) blur(2px);
 }
