@@ -1,7 +1,6 @@
 .images {
   justify-content: space-around;
   display: flex;
-  margin-bottom: 15px;
 }
 
 .images img {
