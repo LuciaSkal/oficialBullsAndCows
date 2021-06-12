@@ -51,33 +51,36 @@ export const Welcome = () => {
 
   const history = useHistory();
   const handleClickTutorial = () => {
-    history.push('/tutorial')
-  } 
+    history.push("/tutorial");
+  };
   const handleClickPlay = () => {
-    history.push('/selectgame')
-  }
-
+    history.push("/selectgame");
+  };
 
   return (
     <>
       <Images />
       <div className="title_baner">
-        <div className="child">
-          <img className="flower_baner" src={baner} alt="baner" />
-          <h1>Bulls & Cows</h1>
-        </div>
+        <img className="background" src={baner} alt="baner" />
+        <h1>Bulls & Cows</h1>
       </div>
 
       <div className="link">
-        <div className="stickerT" onClick={handleClickTutorial}>
-           <span>tutorial</span> 
+        <div
+          className="sticker-btn"
+          id="sticker-tutorial"
+          onClick={handleClickTutorial}
+        >
+          <span>tutorial</span>
         </div>
-        <div className="stickerP" onClick={handleClickPlay}>
-           <span>play</span>
+        <div
+          className="sticker-btn"
+          id="sticker-play"
+          onClick={handleClickPlay}
+        >
+          <span>play</span>
         </div>
       </div>
     </>
   );
 };
-
-
