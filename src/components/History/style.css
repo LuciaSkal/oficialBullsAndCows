@@ -10,6 +10,7 @@
 .history-container {
   max-height: 135px;
   overflow: auto;
+  margin-top: 10px;
 }
 
 #left_bull {

@@ -40,6 +40,7 @@
 
 .winner-baner span {
   font-size: 0.9em;
+  display: flex;
 }
 
 .winner-baner h1 {
@@ -47,4 +48,9 @@
   font-size: 1.5rem;
   text-align: center;
   position: relative;
+}
+
+/*musela jsem dát ke třídě .timer-icon:display:none protože mi tady objevila ikonka timeru, která se sem nehodí, každopádně mi nejde dát mezera před výslednej čas (bože proooč)*/
+.winner-baner .timer-icon {
+  display: none;
 }

@@ -61,7 +61,7 @@ export const Welcome = () => {
     <>
       <Images />
       <div className="title_baner">
-        <img className="background" src={baner} alt="baner" />
+        <img className="title-background" src={baner} alt="baner" />
         <h1>Bulls & Cows</h1>
       </div>
 

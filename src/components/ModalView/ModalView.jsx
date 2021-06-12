@@ -21,7 +21,7 @@ export const ModalView = ({ pocetPokusu, start, stop }) => {
       <span>Number of attempts: {pocetPokusu}</span>
 
       <span>
-        Time needed: <Timer start={start} stop={stop} />
+        Time needed:{"  "} <Timer start={start} stop={stop} />
       </span>
       <button onClick={handleClick} className="home-icon">
         <img className="icon" src={home} alt="" />

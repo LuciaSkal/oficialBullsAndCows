@@ -23,11 +23,19 @@
 
 .icon:hover {
   transform: scale(1.2);
-}  
-
+}
 
 /* tohle bylo predtim, ale nefungovalo
 transform: rotate(180deg);
   transition-delay: 2s;*/
 
-  /*transform: scale(1.2);*/
+/*transform: scale(1.2);*/
+.icon-timer {
+  display: flex;
+  align-items: center;
+}
+.timer-icon {
+  width: 1.6em;
+  height: 1.6em;
+  margin-right: 10px;
+}
