@@ -7,3 +7,10 @@
   width: 48%;
   height: auto;
 }
+
+@media (max-width: 400px) {
+  .images img {
+    width: 55%;
+    height: auto;
+  }
+}
