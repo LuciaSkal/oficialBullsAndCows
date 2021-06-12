@@ -8,7 +8,6 @@ export const History = ({ history }) => {
   useEffect(() => {
     historyRef.current.scrollTop =
       historyRef.current.scrollHeight - historyRef.current.clientHeight;
-    console.log("hello hell");
   }, [history]);
 
   return (

@@ -10,7 +10,7 @@ import { ModalView } from "./components/ModalView/ModalView"
 
 
 export const Game = ({ set, delka }) => {
-  function randomUnique(set, delka) {
+  const randomUnique = (set, delka) => {
     if (delka > set.length) {
       throw new Error("Cannot generate that many unique characters.");
     }
@@ -24,7 +24,7 @@ export const Game = ({ set, delka }) => {
     return rnd; //arr.slice(0, delka);
   }
 
-  function parse(set, delka, input) {
+  const parse = (set, delka, input) => {
     if (input.length !== delka) {
       return "length";
     }
@@ -41,7 +41,7 @@ export const Game = ({ set, delka }) => {
     return split;
   }
 
-  function check(rnd, tip) {
+  const check = (rnd, tip) => {
     const result = {
       bulls: 0,
       cows: 0,
@@ -84,7 +84,6 @@ export const Game = ({ set, delka }) => {
 
   const handleGuess = (guess) => {
     const parsed = parse(set, delka, guess);
-    console.log(guess);
     if (typeof parsed === "string") {
       reportError(parsed);
       return;
@@ -95,15 +94,9 @@ export const Game = ({ set, delka }) => {
 
     const { bulls, cows } = check(rnd, parsed);
     if (bulls === delka) {
-      console.log(`you won the game, after ${history.length + 1} guesses`);
+      /*console.log(`you won the game, after ${history.length + 1} guesses`);*/
      setStop(new Date());
-    } else {
-      console.log(
-        `${guess} : ${bulls} bulls | ${cows} cows | guesses: ${
-          history.length + 1
-        }`
-      );
-    }
+    } 
   };
 
   const handleReset = () => {
