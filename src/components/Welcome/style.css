@@ -1,12 +1,18 @@
-.title_baner {
+/* .title_baner {
+} */
+
+.child {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 106%;
 }
 
+/* .child img {
+} */
+
 .flower_baner {
-  transform: translateX(-17px);
+  /* max-height: 263px; */
+  height: 263px;
 }
 
 h1 {
@@ -17,49 +23,11 @@ h1 {
 }
 
 .link {
-  margin-top: 2%;
   display: flex;
   justify-content: center;
   text-align: center;
   position: relative;
 }
-
-/* .tutorial,
-.play {
-  padding: 0.8rem;
-  width: 3rem;
-  font-size: 1.5rem;
-  border: 2px solid black;
-  text-decoration: none;
-  margin: 1rem;
-  color: black;
-  border-radius: 50%;
-  background: linear-gradient(to right, #ec96a9, #773893);
-}
-
-.tutorial:hover,
-.play:hover {
-  border: 3px dotted #cf5dc6;
-  color: black;
-  background: #fff;
-} */
-
-/* .tutorial, */
-/* .play {
-  text-decoration: none;
-  color: black;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  padding: 5px;
-  transition: all 0.35s;
-} */
-
-/* .tutorial:hover, */
-/* .play:hover {
-  letter-spacing: 5px;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #ec93e3, #af89be);
-} */
 
 .tutorial,
 .play {
@@ -80,24 +48,6 @@ h1 {
   text-transform: uppercase;
 }
 
-/* .sticker {
-  background-size: cover;
-  width: 4.5em;
-  height: 4.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#sticker-tutorial {
-  background-image: url("img/sticker.svg");
-  margin-left: 20px;
-  z-index: 1;
-}
-#sticker-play {
-  background-image: url("img/stickerr.svg");
-} */
-
 .stickerT {
   background-image: url("img/sticker_tutorial.svg");
   background-size: cover;
@@ -107,7 +57,7 @@ h1 {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-right: 3em;
+  margin-right: 3.8em;
 }
 .stickerP {
   background-image: url("img/sticker_play.svg");
@@ -117,5 +67,5 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 4.5em;
+  margin-left: 5em;
 }
