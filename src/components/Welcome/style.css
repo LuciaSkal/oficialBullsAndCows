@@ -27,6 +27,7 @@ h1 {
   justify-content: center;
   text-align: center;
   position: relative;
+  cursor: pointer;
 }
 
 .tutorial,
@@ -36,17 +37,17 @@ h1 {
   transition: all 0.15s;
 }
 
-.tutorial:hover,
-.play:hover {
+
+
+.stickerP span:hover,
+.stickerT span:hover {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #ec93e3, #af89be);
-}
-
-.play:hover {
   text-transform: uppercase;
 }
+
 
 .stickerT {
   background-image: url("img/sticker_tutorial.svg");

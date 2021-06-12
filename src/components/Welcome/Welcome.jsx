@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { gsap } from "gsap";
 import "./style.css";
 import imgBull from "../Images/img/svg_bull.svg";
@@ -49,6 +49,15 @@ export const Welcome = () => {
   //   });
   // });
 
+  const history = useHistory();
+  const handleClickTutorial = () => {
+    history.push('/tutorial')
+  } 
+  const handleClickPlay = () => {
+    history.push('/selectgame')
+  }
+
+
   return (
     <>
       <Images />
@@ -60,22 +69,15 @@ export const Welcome = () => {
       </div>
 
       <div className="link">
-        <div className="stickerT">
-          <Link to="/tutorial" className="tutorial">
-            {/* ref={boxRefTutorial}  */}
-            tutorial
-          </Link>
+        <div className="stickerT" onClick={handleClickTutorial}>
+           <span>tutorial</span> 
         </div>
-        <div className="stickerP">
-          <Link
-            to="/selectgame"
-            //ref={boxRefPlay}
-            className="play"
-          >
-            play
-          </Link>
+        <div className="stickerP" onClick={handleClickPlay}>
+           <span>play</span>
         </div>
       </div>
     </>
   );
 };
+
+
