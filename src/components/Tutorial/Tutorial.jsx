@@ -6,12 +6,14 @@ import second from "./img/tutorial_2.svg";
 import third from "./img/tutorial_3.svg";
 import forth from "./img/tutorial_4.svg";
 import fifth from "./img/tutorial_5.svg";
+import sixth from "./img/tutorial_6.svg";
+import seventh from "./img/tutorial_7.svg";
 import home from "../Header/img/home.svg";
 import arrow from "./img/arrow.svg";
 
 export const Tutorial = () => {
   const [picture, setPicture] = useState(0);
-  const pictures = [first, second, third, forth, fifth];
+  const pictures = [first, second, third, forth, fifth, sixth, seventh];
 
   return (
     <div className="tutorial_container">
@@ -37,7 +39,6 @@ export const Tutorial = () => {
 
         <div className="carousel_media">
           <img
-            loading="lazy"
             className="carousel_image"
             src={pictures[picture]}
             alt="tutorial"
