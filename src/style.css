@@ -57,3 +57,9 @@ body {
 .top-image img {
   display: block;
 }
+
+@media (max-width: 480px) {
+  .container {
+    margin-bottom: 50px;
+  }
+}
