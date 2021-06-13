@@ -12,14 +12,14 @@ const Images = () => {
 
   useEffect(() => {
     gsap.from([boxRefbull.current], {
-      x: "-500px",
+      x: "-400px",
       duration: 3,
-      delay: 0.3
+      delay: 0.4,
     });
     gsap.from([boxRefcow.current], {
-      x: "500px",
+      x: "400px",
       duration: 3,
-      delay: 0.3
+      delay: 0.4,
     });
   });
 
