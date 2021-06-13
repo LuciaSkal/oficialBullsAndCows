@@ -52,16 +52,20 @@ h1 {
 } */
 
 .title_baner {
-  margin: auto;
+  /* margin: auto;
   max-width: 480px;
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center; */
+  display: flex;
+  justify-content: center;
   align-items: center;
+  width: 103%;
 }
 
 .title-background {
-  width: 100%;
+  transform: translateX(-7px);
 }
 
 .title_baner h1 {
