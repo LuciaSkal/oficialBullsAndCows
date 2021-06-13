@@ -37,6 +37,7 @@ export const Tutorial = () => {
 
         <div className="carousel_media">
           <img
+            loading="lazy"
             className="carousel_image"
             src={pictures[picture]}
             alt="tutorial"

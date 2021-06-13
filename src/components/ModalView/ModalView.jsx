@@ -26,14 +26,14 @@ export const ModalView = ({ pocetPokusu, start, stop }) => {
     <div className="winner-baner" ref={winBanner}>
       <p>cowcorn says</p>
       <h1>congrats</h1>
+
       <img className="cowcorn" src={cowcorn} alt="" />
+
       <span>Number of attempts: {pocetPokusu}</span>
-      <div className="time-needed">
-        <span>Time needed:</span>
-        <span>
-          <Timer start={start} stop={stop} />
-        </span>
-      </div>
+
+      <span>
+        Time needed:{"  "} <Timer start={start} stop={stop} />
+      </span>
       <button onClick={handleClick} className="home-icon">
         <img className="icon" src={home} alt="" />
       </button>
