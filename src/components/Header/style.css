@@ -34,6 +34,9 @@ transform: rotate(180deg);
   display: flex;
   align-items: center;
 }
+.icon-timer span {
+  width: 45px;
+}
 .timer-icon {
   width: 1.6em;
   height: 1.6em;
