@@ -2,7 +2,7 @@
   position: absolute;
   width: 470px;
   height: 465px;
-  background-image: url(img/winner-baner.svg);
+  background-image: url(img/finn.svg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -22,8 +22,9 @@
   justify-content: center;
   align-items: center;
   position: initial;
-  margin: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 17px;
+  width: 2.8em;
+  height: 2.8em;
 }
 
 .winner-baner .home-icon:hover {
@@ -50,7 +51,12 @@
   position: relative;
 }
 
-/*musela jsem dát ke třídě .timer-icon:display:none protože mi tady objevila ikonka timeru, která se sem nehodí, každopádně mi nejde dát mezera před výslednej čas (bože proooč)*/
 .winner-baner .timer-icon {
   display: none;
+}
+.time-needed {
+  display: flex;
+}
+.time-needed span {
+  margin-right: 10px;
 }
