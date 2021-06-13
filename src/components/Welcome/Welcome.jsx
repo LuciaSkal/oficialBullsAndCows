@@ -14,10 +14,12 @@ const Images = () => {
     gsap.from([boxRefbull.current], {
       x: "-500px",
       duration: 3,
+      delay: 0.3
     });
     gsap.from([boxRefcow.current], {
       x: "500px",
       duration: 3,
+      delay: 0.3
     });
   });
 
